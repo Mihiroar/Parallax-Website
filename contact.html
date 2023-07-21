@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    /* CSS styles for the parallax effect */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    /* Other existing styles go here */
+
+    .parallax {
+      /* Set the height and background image for the parallax effect */
+      height: 100vh;
+      background-image: url('forest.png'); /* Replace 'your_parallax_image.jpg' with the actual image file */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    /* Other existing styles go here */
+  </style>
+</head>
+<body>
+  <header id="header">
+    <!-- Your existing header content goes here -->
+    <a href="index.html" class="logo">Here the roar</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Work</a></li>
+      <li><a href="#" class="active">Contact</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+  </header>
+  
+  <!-- Parallax section -->
+  <div class="parallax"></div>
+
+  <div class="sec">
+    <h2>Contact.</h2>
+    <p>
+      Fill out the form below to get in touch with Mihiroar.
+    </p>
+    <form>
+      <!-- Your contact form fields go here -->
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  
+  <script>
+    // JavaScript code for the parallax effect
+    window.addEventListener('scroll', function(){
+      let value = window.scrollY;
+
+      // Update the parallax element's position
+      document.querySelector('.parallax').style.backgroundPositionY = value * -0.5 + 'px';
+    });
+  </script>
+  <script src="script.js" defer></script>
+</body>
+</html>
